@@ -70,7 +70,7 @@ func nuke(_ *cobra.Command, _ []string) {
 		okForRemove = true
 		err = removeImages(ctx, cli, is)
 		if err != nil {
-			panic(err)
+			fmt.Printf("%s\n", err)
 		}
 		is, err = listImages(ctx, cli, true)
 		if err != nil {
